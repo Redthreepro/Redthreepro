@@ -56,7 +56,7 @@ A desktop app that lets a non-technical business owner fill in a form and get a 
 
 - Two apps, **33 built installers**, 25 rendered campaign videos
 
-Case study: coming soon.
+[Read the case study](https://github.com/Redthreepro/local-first-ai-video-studio-case-study)
 
 ### Red Three Discovery
 *Personal, in development. Deployed privately.*
