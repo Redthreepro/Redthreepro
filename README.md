@@ -36,7 +36,7 @@ Browser-based site-plan tool for well, septic, and contractor inspections. Type 
 - ~**70,000 lines** across the app, including a ~10,000-line canvas engine on Konva
 - React 19 with the React Compiler, Firebase, Vercel, Upstash Redis, Sentry, Vitest, GitHub Actions
 
-Case study: coming soon.
+[Read the case study](https://github.com/Redthreepro/site-sketch-pro-case-study)
 
 ### Inspection records and photo data engineering
 *Private. Batch pipelines over a decade of company archives.*
