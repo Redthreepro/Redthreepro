@@ -47,7 +47,7 @@ Three pipelines that made 8,000+ legacy inspection reports and roughly two milli
 - **88,286 defect findings** extracted from 5,225 reports at 100% parse success, feeding a data-driven continuing-education deck
 - **1.6 million photo jobs** processed over three weeks of continuous runs
 
-Case study: coming soon.
+[Read the case study](https://github.com/Redthreepro/inspection-data-engineering-case-study)
 
 ### Local-first AI video studio
 *Shipped as Windows installers; multi-brand version personally owned.*
