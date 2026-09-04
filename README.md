@@ -26,7 +26,7 @@ A progressive web app the whole crew uses every day. AI assistant with streaming
 - **1,078 commits** over 15 months; **26 cloud functions**; CI gate of **1,836 automated tests**
 - Per-user daily AI caps, a monthly spend ceiling, and instance limits designed in before launch
 
-Case study: coming soon (documentation only; the production repository stays private).
+[Read the case study](https://github.com/Redthreepro/inspection-ai-platform-case-study) (documentation only; the production repository stays private)
 
 ### Site Sketch Pro
 *sitesketchpro.com — personally owned product, live.*
