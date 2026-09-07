@@ -6,6 +6,18 @@ I take operational problems out of real businesses and turn them into production
 
 Since mid-2025 that has meant a production AI platform used daily by an entire field-inspection crew, a commercial SaaS drawing tool, data pipelines over a decade of company records, and desktop apps a non-technical owner runs himself.
 
+## Case studies
+
+Documentation-only repositories. Production source stays private; company work is anonymized.
+
+| Project | What it is | Status |
+|---|---|---|
+| [Field-inspection AI platform](https://github.com/Redthreepro/inspection-ai-platform-case-study) | PWA with a retrieval-grounded AI assistant, LLM photo analysis, and an in-house report writer, used daily by 100% of a company's inspectors | Production since 2025 |
+| [Site Sketch Pro](https://github.com/Redthreepro/site-sketch-pro-case-study) | Browser site-plan tool for well and septic inspections, on satellite imagery with OSM footprint auto-trace | Live SaaS, pre-revenue |
+| [Inspection records and photo data engineering](https://github.com/Redthreepro/inspection-data-engineering-case-study) | Pipelines over 8,000 reports and ~2M photos, plus the rebuild after a drive failure | Run to completion |
+| [Local-first AI video studio](https://github.com/Redthreepro/local-first-ai-video-studio-case-study) | Electron app that turns a form into a branded promo video with local TTS and voice cloning | Shipped v1 |
+| [Red Three Discovery](https://github.com/Redthreepro/red-three-discovery-case-study) | Consultant's workbench: discovery notes to process maps, scored opportunities, and client deliverables | In development |
+
 ---
 
 ## What I build
@@ -18,54 +30,54 @@ Since mid-2025 that has meant a production AI platform used daily by an entire f
 ## Selected work
 
 ### Field-inspection AI platform
-*Private, in production since 2025 for a multi-inspector Michigan home-inspection company.*
+*Private. In production since 2025 for a multi-inspector Michigan home-inspection company.*
 
-A progressive web app the whole crew uses every day. AI assistant with streaming answers grounded in the company's own procedures via retrieval (Firestore native vector search, no separate vector database to operate). LLM photo analysis, including an equipment data-plate reader that decodes manufacture dates from manufacturer serial schemes and learns from inspector corrections. An in-house report writer that replaced commercial report software, with phone camera capture, a photo bank, voice dictation, and a client-facing published report. Scheduling-system integration, training module with AI grading, and an admin console for roles, usage, and cost.
+The crew's single working surface: a streaming AI assistant grounded in the company's own procedures through Firestore native vector search, an equipment data-plate reader that learns from inspector corrections, and an in-house report writer that replaced commercial software. Scheduling integration, a training module with AI grading, and an admin console for roles, usage, and cost.
 
-- Adopted by **100% of field inspectors**; 13 active users, roughly 79 logins a week when last measured
-- **1,078 commits** over 15 months; **26 cloud functions**; CI gate of **1,836 automated tests**
+- **100% of field inspectors** adopted; 13 active users, ~79 logins a week when last measured
+- **1,078 commits** over 15 months, **26 cloud functions**, CI gate of **1,836 automated tests**
 - Per-user daily AI caps, a monthly spend ceiling, and instance limits designed in before launch
 
-[Read the case study](https://github.com/Redthreepro/inspection-ai-platform-case-study) (documentation only; the production repository stays private)
+[Case study](https://github.com/Redthreepro/inspection-ai-platform-case-study)
 
 ### Site Sketch Pro
-*sitesketchpro.com — personally owned product, live.*
+*[sitesketchpro.com](https://sitesketchpro.com). Personally owned, live.*
 
-Browser-based site-plan tool for well, septic, and contractor inspections. Type an address, get a satellite background, auto-trace the building footprint from OpenStreetMap, place well and septic symbols with setback rules, and export a branded PDF. Includes an admin dashboard, rate-limited serverless API, error monitoring, CI with automated tests, and the legal pages (Terms, Privacy, DPA, SLA) a real product needs. Free trial and pricing tiers are live; payment processing is not yet wired.
+Enter an address, get a satellite background, auto-trace the building footprint from OpenStreetMap, place well and septic symbols with setback rules, export a branded PDF. Admin dashboard, rate-limited serverless API, Sentry, CI with tests, and the legal pages a real product needs. Free trial and pricing tiers are live; payment processing is not yet wired.
 
-- ~**70,000 lines** across the app, including a ~10,000-line canvas engine on Konva
-- React 19 with the React Compiler, Firebase, Vercel, Upstash Redis, Sentry, Vitest, GitHub Actions
+- ~**70,000 lines**, including a ~10,000-line Konva canvas engine
+- React 19 with the React Compiler, Firebase, Vercel, Upstash Redis, Vitest, GitHub Actions
 
-[Read the case study](https://github.com/Redthreepro/site-sketch-pro-case-study)
+[Case study](https://github.com/Redthreepro/site-sketch-pro-case-study)
 
 ### Inspection records and photo data engineering
 *Private. Batch pipelines over a decade of company archives.*
 
-Three pipelines that made 8,000+ legacy inspection reports and roughly two million photos queryable: format fingerprinting across three generations of report HTML, defect extraction into a structured dataset, and photo classification using a local CLIP model first with cloud vision only for low-confidence images. After a drive failure took the sorted photo database, the sort was rebuilt from the reports themselves.
+Deterministic parsers across three generations of report HTML, a defect dataset feeding a continuing-education class, an append-only report index, and a tiered photo classifier that runs a local CLIP model first and cloud vision only on low-confidence images. When the drive holding the sorted photo database died, the sort was rebuilt from the reports themselves.
 
-- **8,193 reports indexed with zero failures** in a single 30-minute run
-- **88,286 defect findings** extracted from 5,225 reports at 100% parse success, feeding a data-driven continuing-education deck
-- **1.6 million photo jobs** processed over three weeks of continuous runs
+- **8,193 reports** indexed with zero failures in one 30-minute run
+- **88,286 defect findings** from 5,225 reports at 100% parse success
+- **1.6 million photo jobs** processed; **95%** of a 2M-photo index re-bound after the drive failure
 
-[Read the case study](https://github.com/Redthreepro/inspection-data-engineering-case-study)
+[Case study](https://github.com/Redthreepro/inspection-data-engineering-case-study)
 
 ### Local-first AI video studio
-*Shipped as Windows installers; multi-brand version personally owned.*
+*Shipped as Windows installers; the multi-brand edition is personally owned.*
 
-A desktop app that lets a non-technical business owner fill in a form and get a branded promo video. An AI agent authors the composition from a brand kit, narration is generated locally, voice cloning runs locally, and FFmpeg renders the result. Nothing but the authoring step touches a cloud API. Packaged as Electron installers with a Mac build runbook written for a non-developer to follow.
+A non-technical owner fills in a form and gets a branded promo video. An AI agent authors the composition from a brand kit; narration and voice cloning run locally; FFmpeg renders. Only the authoring step touches a cloud service, on a subscription rather than a metered key. Delivered with a Mac build runbook a non-developer can follow.
 
-- Two apps, **33 built installers**, 25 rendered campaign videos
+- Two editions, **33 built installers**, 25 rendered campaign videos
 
-[Read the case study](https://github.com/Redthreepro/local-first-ai-video-studio-case-study)
+[Case study](https://github.com/Redthreepro/local-first-ai-video-studio-case-study)
 
 ### Red Three Discovery
-*Personal, in development. Deployed privately.*
+*Personal. In development, deployed privately.*
 
-A consultant's workbench for understanding how a business runs before proposing changes: discovery sessions, process maps, opportunity scoring, and branded reports and proposals. Its AI layer is provider-agnostic with a typed task registry, versioned prompts, and provenance on every output. Ships with a fully fictional showcase company so the whole workflow can be demoed without client data.
+Discovery notes become editable process maps, a transparent 0 to 100 opportunity score, a phased roadmap, and printable reports and proposals. The AI layer routes every call through one runner with a typed task registry, versioned prompts, and provenance on every output. A fully fictional showcase company demonstrates the whole method without client data.
 
-- Next.js 15, TypeScript, Prisma, Supabase Postgres
+- Next.js 15, TypeScript, Prisma, Supabase Postgres; 2 of 11 AI tasks implemented, the rest labeled as planned
 
-[Read the case study](https://github.com/Redthreepro/red-three-discovery-case-study)
+[Case study](https://github.com/Redthreepro/red-three-discovery-case-study)
 
 **Also built:** a compliance-guarded outreach automation (kill switch, daily cap, per-agent cooldown, suppression list) that was deliberately never launched until the trigger was right; a file-based operations protocol that keeps scheduled AI agents, background jobs, and my own priorities in sync across projects; a batch video converter; a workstation provisioning installer.
 
@@ -79,7 +91,7 @@ AI coding agents write most of the implementation in my projects. I do the parts
 - Direct the agents, review their output, and debug with them when it breaks
 - Deploy, field-test with real users, handle the incidents, and iterate
 
-The commit history on my repositories reflects this honestly. That is the method, not a shortcut.
+The commit history on my repositories reflects this honestly. That is the method, not a shortcut. Each case study has a "How it was built" section that separates my work from the agents' work.
 
 ## Technology
 
