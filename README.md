@@ -65,6 +65,8 @@ A consultant's workbench for understanding how a business runs before proposing 
 
 - Next.js 15, TypeScript, Prisma, Supabase Postgres
 
+[Read the case study](https://github.com/Redthreepro/red-three-discovery-case-study)
+
 **Also built:** a compliance-guarded outreach automation (kill switch, daily cap, per-agent cooldown, suppression list) that was deliberately never launched until the trigger was right; a file-based operations protocol that keeps scheduled AI agents, background jobs, and my own priorities in sync across projects; a batch video converter; a workstation provisioning installer.
 
 ## How I work
