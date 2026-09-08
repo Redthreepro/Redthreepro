@@ -31,10 +31,10 @@ So the pipeline stopped one integration short. The live configuration omits the 
 
 ## What happened next
 
-The v1 pipeline never sent a real email. A later version did. Rebuilt on self-hosted n8n with the mailbox question settled and the guardrails carried over (service-area rules, do-not-contact and cooldown controls, lead routing, persistent state with duplicate protection and failure logging), it runs in production and has sent over a thousand automated emails. The point stands: the version that launched is the one that had its brakes built first.
+The v1 pipeline never sent a real email. A later version did. Rebuilt on self-hosted n8n with the mailbox question settled and the guardrails carried over (service-area rules, do-not-contact and cooldown controls, lead routing, persistent state with duplicate protection and failure logging), it has run in production since January 2026: 4,019 emails through early August, 95% delivered, zero spam complaints, 2% hard bounces. The point stands: the version that launched is the one that had its brakes built first.
 
 ## What this is worth
 
-The skill in automation isn't making the thing send. It's knowing what has to be true before it's allowed to, building those conditions as code rather than as intentions, and being willing to leave the switch off until they're met. The v1 that never sent is the reason the production version could send a thousand times without a cleanup story afterward.
+The skill in automation isn't making the thing send. It's knowing what has to be true before it's allowed to, building those conditions as code rather than as intentions, and being willing to leave the switch off until they're met. The v1 that never sent is the reason the production version could send four thousand times without a cleanup story afterward.
 
 *Ryan Faber builds AI applications and business software for operations. Case studies at [github.com/Redthreepro](https://github.com/Redthreepro).*
