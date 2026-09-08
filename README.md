@@ -6,7 +6,7 @@
 
 I take operational problems out of real businesses and turn them into production software. I design the system, direct AI coding agents to build it, test it with the people who have to use it, deploy it, and keep it running.
 
-Since mid-2025 that has meant a production AI platform used daily by an entire field-inspection crew, a commercial SaaS drawing tool, data pipelines over a decade of company records, and desktop apps a non-technical owner runs himself.
+Since mid-2024 that has meant a production AI platform used daily by an entire field-inspection crew, a commercial SaaS drawing tool, data pipelines over a decade of company records, and desktop apps a non-technical owner runs himself.
 
 ## Case studies
 
