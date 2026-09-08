@@ -124,7 +124,7 @@ I came to software from operational work: construction, real estate, photography
 
 Roles where someone has to take an operational problem and turn it into working, maintained software, with AI as a tool rather than a slogan. Titles that fit: AI application developer, applied AI or AI implementation engineer, AI automation engineer, technical product builder, solutions engineer, forward-deployed engineer at a startup, or full-stack developer on a team that builds with AI agents.
 
-- **Where:** remote, or hybrid in the Grand Rapids, Michigan area
+- **Where:** Grand Rapids, Michigan (in office or hybrid), or fully remote. Not relocating.
 - **How:** full-time, or contract-to-hire; open to a fractional or consulting engagement for the right problem
 - **What I'm best at:** small teams and real operations, where the person building the software has also stood in the workflow
 - **What I'm not:** a traditional senior engineer for a large-scale systems role. If the job is deep algorithms or a whiteboard interview, that's not me
