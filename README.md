@@ -1,5 +1,3 @@
-<img src="assets/headshot.jpg" alt="Ryan Faber" width="140" align="right" style="border-radius:50%">
-
 # Ryan Faber
 
 **AI Application Developer · Technical Product Builder**
