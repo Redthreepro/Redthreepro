@@ -106,6 +106,14 @@ Used in systems I have designed, directed, deployed, and operated:
 
 I am not a traditional senior engineer in these stacks. I know them well enough to make sound design decisions, read and reason about what the agents produce, and own the result in production.
 
+## Writing
+
+Short pieces on decisions from the case studies:
+
+- [Cost-first AI for a small business](writing/cost-first-ai-for-a-small-business.md)
+- [RAG on Firestore without a vector database](writing/rag-on-firestore-without-a-vector-database.md)
+- [The automation I didn't launch](writing/the-automation-i-did-not-launch.md)
+
 ## Background
 
 I came to software from operational work: construction, real estate, photography and media, home inspection, and running the day-to-day of a small business. I have spent years inside the workflows I now build for, which is why the software tends to fit how people actually work rather than how a spec says they should.
@@ -115,3 +123,4 @@ I came to software from operational work: construction, real estate, photography
 - Email: redthreepro@gmail.com
 - LinkedIn: https://www.linkedin.com/in/ryan-faber-864b77426
 - Site Sketch Pro: https://sitesketchpro.com
+- Resume: [PDF](resume/Ryan-Faber-Resume.pdf) · [Markdown](resume/Ryan-Faber-Resume.md)

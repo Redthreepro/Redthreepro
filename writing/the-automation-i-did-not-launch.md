@@ -1,0 +1,38 @@
+# The automation I didn't launch
+
+*A working email pipeline, a kill switch that has never been turned on, and why that was the right outcome.*
+
+In December 2025 I built an outreach automation for a home-inspection company. The idea was simple and the business case was real: when a home goes under contract, the listing agent often influences which inspector gets called. The company already received MLS "new pending" notifications by email. Parse the notification, look up the listing agent, send them a coupon for a well-and-septic evaluation at exactly the moment they're thinking about inspections.
+
+The twenty-line version of this is a weekend. The version I built took a few days, works end to end, has one recorded send (a test), and has been switched off ever since. This is about why both of those things are true.
+
+## Build the brakes first
+
+Before the pipeline could email anyone, it had to pass four checks, in order, each one logged with a reason when it blocks:
+
+1. **A kill switch** that has to literally equal `true`. Absent, empty, or anything else means nothing sends. Off is the default state.
+2. **A suppression list**, with endpoints to add and remove addresses. Anyone on it is never emailed again.
+3. **A daily cap** across all recipients. Twenty-five, by default.
+4. **A per-agent cooldown.** Anyone emailed in the last twenty-one days is skipped.
+
+Every stage of the pipeline returns a reason when it stops: couldn't parse, out of service area, agent not found, send disabled, suppressed, cap reached, cooldown active, send failed. In demo mode, every send redirects to an internal address, so the whole thing can run against real notifications with no agent receiving anything.
+
+The order matters. Adding a suppression list after the first angry reply means the first angry reply already happened.
+
+## Then don't launch
+
+Two things stopped it, and I'd stop it again.
+
+**The trigger wasn't the company's to give yet.** The final integration needed the service to read a mailbox. Which mailbox, whose credentials, and what else that exposed were decisions for the owner, not for me. That decision was never made, and I wasn't going to make it by default.
+
+**The compliance posture was incomplete.** The guardrails handle volume, frequency, and opt-out. They don't handle consent, sender identification, or the disclosure language commercial email requires. Emailing a directory of agents who never opted in is the kind of thing that works until it very much doesn't, and the company's referral relationships are worth more than a coupon campaign.
+
+So the pipeline stopped one integration short. The live configuration omits the kill-switch flag entirely, which means the policy blocks everything by construction. It is fail-closed by accident as much as by design, and one of the improvements on the list is to make the caps fail closed too when they're unset.
+
+## What this is worth on a resume
+
+Less than a launch, in the obvious way. More than a launch, in the way that matters to anyone who has cleaned up after an automation that ran when it shouldn't have.
+
+The skill in automation isn't making the thing send. It's knowing what has to be true before it's allowed to, building those conditions as code rather than as intentions, and being willing to leave the switch off when the conditions aren't met. I'd rather show a reviewer a pipeline that has never sent a real email and explain why than one that sent ten thousand and explain what happened next.
+
+*Ryan Faber builds AI applications and business software for operations. Case studies at [github.com/Redthreepro](https://github.com/Redthreepro).*
