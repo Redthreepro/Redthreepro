@@ -31,7 +31,7 @@ So the pipeline stopped one integration short. The live configuration omits the 
 
 ## What happened next
 
-The v1 pipeline never sent a real email. A later version did. Rebuilt on self-hosted n8n with the mailbox question settled and the guardrails carried over (service-area rules, do-not-contact and cooldown controls, lead routing, persistent state with duplicate protection and failure logging), it has run in production since January 2026: 4,019 emails through early August, 95% delivered, zero spam complaints, 2% hard bounces. The point stands: the version that launched is the one that had its brakes built first.
+The v1 pipeline never sent a real email. A later version did. Rebuilt on self-hosted n8n and Google Apps Script with the mailbox question settled and the guardrails carried over (service-area rules, do-not-contact and cooldown controls, lead routing, persistent state with duplicate protection and failure logging), it has run in production since January 2026: 4,019 emails through early August, 95% delivered, zero spam complaints, 2% hard bounces. The point stands: the version that launched is the one that had its brakes built first.
 
 ## What this is worth
 
