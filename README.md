@@ -19,7 +19,7 @@ Documentation-only repositories. Production source stays private; company work i
 | [Inspection records and photo data engineering](https://github.com/Redthreepro/inspection-data-engineering-case-study) | Pipelines over 8,000 reports and ~2M photos, plus the rebuild after a drive failure | Run to completion |
 | [Local-first AI video studio](https://github.com/Redthreepro/local-first-ai-video-studio-case-study) | Electron app that turns a form into a branded promo video with local TTS and voice cloning | Shipped v1 |
 | [Red Three Discovery](https://github.com/Redthreepro/red-three-discovery-case-study) | Consultant's workbench: discovery notes to process maps, scored opportunities, and client deliverables | In development |
-| [Compliance-guarded outreach automation](https://github.com/Redthreepro/outreach-automation-case-study) | Email automation with a kill switch, daily cap, per-agent cooldown, and suppression list, built before the first send | Built, deliberately unlaunched |
+| [Compliance-guarded outreach automation](https://github.com/Redthreepro/outreach-automation-case-study) | Listing-triggered agent outreach with a kill switch, daily cap, per-agent cooldown, and suppression list. The v1 pipeline was held back until the compliance posture was right; the production rebuild on n8n has sent 1,000+ automated emails | Production (n8n rebuild); v1 case study |
 | [Jarvis operations protocol](https://github.com/Redthreepro/jarvis-ops-protocol-case-study) | File-based protocol that keeps eight scheduled AI agents, background jobs, and a human's priorities coherent across sessions, at zero API cost | Running daily |
 
 ---
@@ -83,7 +83,7 @@ Discovery notes become editable process maps, a transparent 0 to 100 opportunity
 
 [Case study](https://github.com/Redthreepro/red-three-discovery-case-study)
 
-**Also built:** a [compliance-guarded outreach automation](https://github.com/Redthreepro/outreach-automation-case-study) that was deliberately never launched until the trigger and compliance posture were right; a [file-based operations protocol](https://github.com/Redthreepro/jarvis-ops-protocol-case-study) that keeps scheduled AI agents, background jobs, and my own priorities in sync across projects; a batch video converter; a workstation provisioning installer.
+**Also built:** a [compliance-guarded outreach automation](https://github.com/Redthreepro/outreach-automation-case-study) whose v1 was deliberately held back until the compliance posture was right, then rebuilt on self-hosted n8n where it now runs in production with over 1,000 automated emails sent; a [file-based operations protocol](https://github.com/Redthreepro/jarvis-ops-protocol-case-study) that keeps scheduled AI agents, background jobs, and my own priorities in sync across projects; a batch video converter; a workstation provisioning installer.
 
 ## How I work
 

@@ -1,6 +1,6 @@
 # The automation I didn't launch
 
-*A working email pipeline, a kill switch that has never been turned on, and why that was the right outcome.*
+*A working email pipeline, a kill switch that stayed off, and why the version that eventually launched was better for it.*
 
 In December 2025 I built an outreach automation for a home-inspection company. The idea was simple and the business case was real: when a home goes under contract, the listing agent often influences which inspector gets called. The company already received MLS "new pending" notifications by email. Parse the notification, look up the listing agent, send them a coupon for a well-and-septic evaluation at exactly the moment they're thinking about inspections.
 
@@ -28,6 +28,10 @@ Two things stopped it, and I'd stop it again.
 **The compliance posture was incomplete.** The guardrails handle volume, frequency, and opt-out. They don't handle consent, sender identification, or the disclosure language commercial email requires. Emailing a directory of agents who never opted in is the kind of thing that works until it very much doesn't, and the company's referral relationships are worth more than a coupon campaign.
 
 So the pipeline stopped one integration short. The live configuration omits the kill-switch flag entirely, which means the policy blocks everything by construction. It is fail-closed by accident as much as by design, and one of the improvements on the list is to make the caps fail closed too when they're unset.
+
+## What happened next
+
+The v1 pipeline never sent a real email. A later version did. Rebuilt on self-hosted n8n with the mailbox question settled and the guardrails carried over (service-area rules, do-not-contact and cooldown controls, lead routing, persistent state with duplicate protection and failure logging), it runs in production and has sent over a thousand automated emails. The point stands: the version that launched is the one that had its brakes built first.
 
 ## What this is worth on a resume
 
